@@ -1,0 +1,83 @@
+{
+  "name": "alpha-chat",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./dist/electron.js",
+  "homepage": "./",
+  "scripts": {
+    "server": "react-scripts start",
+    "start": "tsc && electron .",
+    "build": "react-scripts build",
+    "deploy:win64": "electron-builder --win nsis:x64"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
+    "react-router-dom": "^6.21.3",
+    "react-scripts": "5.0.1",
+    "socket.io-client": "^4.7.4",
+    "sweetalert2": "^11.10.3",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron-builder": "^24.9.1",
+    "@types/electron": "^1.6.10"
+  },
+  "build": {
+    "productName": "AlphaChat",
+    "appId": "net.jetalab.ex.alphachat",
+    "asar": true,
+    "mac": {
+      "target": [
+        "default"
+      ]
+    },
+    "dmg": {
+      "title": "AlphaChat"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+              "x64",
+              "ia32"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": false,
+      "createDesktopShortcut": true
+    },
+    "directories": {
+      "buildResources": "./resources/installer/",
+      "output": "./res/",
+      "app": "."
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

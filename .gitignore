@@ -1,0 +1,6 @@
+build/
+dist/
+node_modules/
+res/
+msg.json
+config.json
