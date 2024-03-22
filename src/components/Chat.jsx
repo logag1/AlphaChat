@@ -1,3 +1,4 @@
+import style from './css/chat.module.css';
 import { IoArrowBack } from "react-icons/io5";
 import { TbSend } from "react-icons/tb";
 import { useParams, useNavigate } from 'react-router-dom';
@@ -8,98 +9,17 @@ import Swal from 'sweetalert2';
 
 const { ipcRenderer } = window.require('electron');
 
-const styles = {
-  header: {
-    width: '100%',
-    height: '60px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    borderBottom: '2px solid gray'
-  },
-  name: {
-    fontSize: '25px',
-    fontWeight: 'bolder',
-    fontFamily: 'SUIT-Regular',
-    marginRight: 'auto',
-    paddingLeft: '30px'
-  },
-  icon: {
-    fontSize: '25px'
-  },
-  inputBox: {
-    display: 'inline-block',
-    height: '40px',
-    padding: '0 10px',
-    verticalAlign: 'middle',
-    border: '1px solid #dddddd',
-    width: '60%',
-    color: '#000000',
-    fontSize: '20px',
-    borderRadius: '5px',
-    fontFamily: 'SUIT-Regular'
-  },
-  chatContainer: {
-    position: 'fixed',
-    bottom: 0,
-    left: '50%',
-    transform: 'translateX(-50%)',
-    padding: '10px',
-    width: '700px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'row',
-  },
-  dragContainer: {
-    overflowY: 'auto',
-    maxHeight: '450px',
-  },
-  messageContainer: {
-    marginTop: '5px',
-    padding: '15px 10px',
-    wordBreak: 'keep-all',
-    width: '800px',
-    height: '50px',
-    display: 'flex',
-  },
-  profileImg: {
-    width: '60px',
-    height: '60px',
-    borderRadius: '30%',
-    overflow: 'hidden',
-  },
-  chat: {
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-  },
-  chatName: {
-    fontSize: '15px',
-    fontWeight: 'bolder',
-    marginLeft: '10px',
-    marginTop: '10px',
-    transform: 'translateY(-10px)',
-    fontFamily: 'SUIT-Regular',
-    padding: '5px 0px',
-  },
-  chatText: {
-    marginLeft: '10px',
-    fontFamily: 'SUIT-Regular',
-    display: 'flex',
-    marginTop: '10px'
-  }
-}
 
 function ShowMessage({ messages }) {
   return (
     <div>
       {
         messages.map((msg, index) => (
-          <div key={index} style={styles.messageContainer}>
-            <img src={profileImg} alt="" style={styles.profileImg} />
-            <div style={styles.chat}>
-              <span style={styles.chatName}>{msg.userId}</span>
-              <span style={styles.chatText}>{msg.text}</span>
+          <div key={index} className={style.messageContainer}>
+            <img src={profileImg} alt="" className={style.profileImg} />
+            <div className={style.chat}>
+              <span className={style.chatName}>{msg.userId}</span>
+              <span className={style.chatText}>{msg.text}</span>
             </div>
           </div>
         ))
@@ -256,24 +176,24 @@ export default function Chat() {
 
   return (
     <div>
-      <div style={styles.header}>
-        <IoArrowBack onClick={() => navigate('/main')} style={styles.icon} />
-        <span style={styles.name}>{name}</span>
+      <div className={style.header}>
+        <IoArrowBack onClick={() => navigate('/main')} className={style.icon} />
+        <span className={style.name}>{name}</span>
       </div>
       <div className="chat_scroll_box" ref={chatContainerRef}>
         <ShowMessage messages={messages} />
       </div>
-      <div style={styles.chatContainer}>
+      <div className={style.chatContainer}>
         <input
           type="text"
           id={message}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          style={styles.inputBox}
+          className={style.inputBox}
           placeholder="Type a message..."
           onKeyPress={handleOnKeyPress}
         />
-        <TbSend onClick={() => sendMessage(message)} style={{ fontSize: '30px', marginLeft: '10px' }} />
+        <TbSend onClick={() => sendMessage(message)} className={{ fontSize: '30px', marginLeft: '10px' }} />
       </div>
     </div>
   );

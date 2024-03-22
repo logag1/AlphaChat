@@ -1,0 +1,165 @@
+.friendContainer {
+  width: 300px;
+  height: 86vh;
+  margin-top: 4vh;
+  background-color: RGB(242, 242, 242);
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  display: flex;
+  justify-content: flex-start;
+  margin-right: auto;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.friendsContainer {
+  overflow-y: auto;
+  max-height: 480px;
+}
+
+.menuContainer {
+  width: 50px;
+  height: 86vh;
+  margin-top: 4vh;
+  background-color: RGB(242, 242, 242);
+  border: 1px solid lightgray;
+  display: flex;
+  border-radius: 10px;
+  justify-content: flex-start;
+  margin-left: auto;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contentContainer {
+  width: 600px;
+  height: 86vh;
+  margin-top: 4vh;
+  margin-left: 20px;
+  background-color: RGB(242, 242, 242);
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  display: flex;
+}
+
+.category {
+  width: 600px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid gray;
+  text-align: center;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: 'SUIT-Regular';
+  padding: 10px 20px;
+}
+
+.friends {
+  align-items: center;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr;
+  width: 98%;
+  padding: 5px;
+}
+
+.item {
+  height: 30px;
+  margin-top: 5px;
+  padding: 15px 10px;
+  word-break: keep-all;
+  transition: 0.5s;
+  border-top: 0.5px solid lightgray;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+
+.name {
+  font-size: 15px;
+  font-weight: bolder;
+  margin-right: auto;
+  padding-left: 10px;
+}
+
+.statusMessage {
+  padding: 15px;
+  font-size: 13px;
+  color: lightgray; /* Changed 'fontColor' to 'color' */
+}
+
+.profileImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 30%;
+  overflow: hidden;
+  border: 2px solid #dfc8c8;
+}
+
+.icon {
+  font-size: 30px;
+}
+
+.backgroundImg {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+  padding-right: 80px;
+}
+
+.online {
+  font-size: 15px;
+  padding-right: 15px;
+}
+
+.logo {
+  font-size: 35px;
+  padding: 10px 0px;
+}
+
+.settingContainer {
+  width: 590px;
+  height: 70px;
+  font-size: 20px;
+  display: flex;
+  padding: 5px;
+  margin-left: auto;
+  font-family: 'SOYOMapleBoldTTF';
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 2px solid lightgray;
+  text-align: center;
+  align-items: center;
+}
+
+.categoryTitle {
+  font-size: 20px;
+  font-family: 'SOYOMapleBoldTTF';
+  padding: 10px;
+}
+
+.categoryContent {
+  font-family: 'SUITE-Regular';
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.myProfile {
+  width: 33px;
+  height: 33px;
+  margin: 10px 0px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid black;
+}

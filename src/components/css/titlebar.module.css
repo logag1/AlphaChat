@@ -1,0 +1,31 @@
+.titleBar {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-end;
+  -webkit-app-region: drag;
+}
+
+.menuBar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icon {
+  padding: 7px;
+  font-size: 20px;
+  -webkit-app-region: no-drag;
+}
+
+.lightLogo {
+  font-size: 30px;
+  padding: 5px;
+  color: #000000;
+  text-shadow: 1px 1px 1px #fff;
+  font-family: 'SUIT-Regular';
+  font-weight: bolder;
+}
+
+.logoContainer {
+  margin-right: auto;
+}

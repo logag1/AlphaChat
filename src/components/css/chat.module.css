@@ -1,0 +1,89 @@
+.header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid gray;
+}
+
+.name {
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: 'SUIT-Regular';
+  margin-right: auto;
+  padding-left: 30px;
+}
+
+.icon {
+  font-size: 25px;
+}
+
+.inputBox {
+  display: inline-block;
+  height: 40px;
+  padding: 0 10px;
+  vertical-align: middle;
+  border: 1px solid #dddddd;
+  width: 60%;
+  color: #000000;
+  font-size: 20px;
+  border-radius: 5px;
+  font-family: 'SUIT-Regular';
+}
+
+.chatContainer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.dragContainer {
+  overflow-y: auto;
+  max-height: 450px;
+}
+
+.messageContainer {
+  margin-top: 5px;
+  padding: 15px 10px;
+  word-break: keep-all;
+  width: 800px;
+  height: 50px;
+  display: flex;
+}
+
+.profileImg {
+  width: 60px;
+  height: 60px;
+  border-radius: 30%;
+  overflow: hidden;
+}
+
+.chat {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.chatName {
+  font-size: 15px;
+  font-weight: bolder;
+  margin-left: 10px;
+  margin-top: 10px;
+  transform: translateY(-10px);
+  font-family: 'SUIT-Regular';
+  padding: 5px 0px;
+}
+
+.chatText {
+  margin-left: 10px;
+  font-family: 'SUIT-Regular';
+  display: flex;
+  margin-top: 10px;
+}

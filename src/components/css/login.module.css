@@ -1,0 +1,104 @@
+.body {
+  margin: 0;
+}
+
+.componentContainer {
+  width: 300px;
+  height: 540px;
+  background-color: RGB(220, 220, 220);
+  border-left: 1.5px solid lightgray;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lightLogo {
+  font-size: 30px;
+  padding: 5px;
+  color: #000000;
+  text-shadow: 1px 1px 1px #fff;
+  font-family: 'SUIT-Regular';
+  font-weight: bolder;
+}
+
+.flexContainer {
+  display: flex;
+}
+
+.menuButton {
+  background-color: #1E2019;
+  height: 45px;
+  padding: 5px 20px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-family: 'SUIT-Regular';
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.input {
+  width: 300px;
+  height: 60px;
+  margin-bottom: 20px;
+  border-width: 0 0 3px;
+  border-color: lightgray;
+  font-family: 'SUIT-Regular';
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 35px;
+  margin-top: 15px;
+}
+
+.inputContainer {
+  align-items: center;
+  flex-direction: column;
+  height: 410px;
+  padding: 10px;
+  margin-left: 30px;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 290px;
+}
+
+.version {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  font-weight: bolder;
+}
+
+.login_btn {
+  background-color: #1E2019;
+  height: 45px;
+  padding: 5px 20px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-family: 'SUIT-Regular';
+  font-size: 20px;
+  margin-top: 15px;
+  width: 350px;
+  margin: 10px 0px;
+}
+
+.register_btn {
+  background-color: #1E2019;
+  height: 45px;
+  padding: 5px 20px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-family: 'SUIT-Regular';
+  font-size: 20px;
+  margin-top: 15px;
+  width: 350px;
+}
